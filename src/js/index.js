@@ -1,12 +1,20 @@
-//import react into the bundle
-import React from "react";
 import ReactDOM from "react-dom";
+import React from 'react';
+import Seconds from "./component/Seconds";
 
-// include your styles into the webpack bundle
 import "../styles/index.css";
 
-//import your own components
-import Home from "./component/home.jsx";
+function SecondCounter() {
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+  return (
+    <div className="bigCounter">
+      <div className="clockIcon">
+        <i className="fas fa-clock"></i>
+      </div>
+      <Seconds/>
+    </div>
+  );
+
+}
+
+ReactDOM.render(<SecondCounter />, document.querySelector("#app"));
